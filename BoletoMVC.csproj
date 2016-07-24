@@ -17,7 +17,7 @@
     <AssemblyName>BoletoMVC</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BoletoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -206,6 +207,13 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Views\Boleto\Exibir1.aspx.cs">
+      <DependentUpon>Exibir1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Boleto\Exibir1.aspx.designer.cs">
+      <DependentUpon>Exibir1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -214,6 +222,42 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagens\001.gif" />
+    <Content Include="Imagens\021.gif" />
+    <Content Include="Imagens\027.gif" />
+    <Content Include="Imagens\033.gif" />
+    <Content Include="Imagens\041.gif" />
+    <Content Include="Imagens\047.gif" />
+    <Content Include="Imagens\070.jpg" />
+    <Content Include="Imagens\091.gif" />
+    <Content Include="Imagens\104.gif" />
+    <Content Include="Imagens\151.gif" />
+    <Content Include="Imagens\237.gif" />
+    <Content Include="Imagens\341.gif" />
+    <Content Include="Imagens\347.gif" />
+    <Content Include="Imagens\353.gif" />
+    <Content Include="Imagens\356.gif" />
+    <Content Include="Imagens\399.gif" />
+    <Content Include="Imagens\409.gif" />
+    <Content Include="Imagens\745.gif" />
+    <Content Include="Imagens\748.gif" />
+    <Content Include="Imagens\756.gif" />
+    <Content Include="Imagens\b.gif" />
+    <Content Include="Imagens\BoletoVB.GIF" />
+    <Content Include="Imagens\BoletoVBp.GIF" />
+    <Content Include="Imagens\btnAmex.gif" />
+    <Content Include="Imagens\btnBoleto.gif" />
+    <Content Include="Imagens\btnMaster.gif" />
+    <Content Include="Imagens\btnPagamentoDigital.gif" />
+    <Content Include="Imagens\btnPagSeguro.gif" />
+    <Content Include="Imagens\btnPayPal.gif" />
+    <Content Include="Imagens\btnVisa.gif" />
+    <Content Include="Imagens\CodBarras_x_IPTE.png" />
+    <Content Include="Imagens\corte.gif" />
+    <Content Include="Imagens\Impactro-Logo.gif" />
+    <Content Include="Imagens\p.gif" />
+    <Content Include="Imagens\SeuLogo.gif" />
+    <Content Include="Imagens\VB_Logo_01.gif" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -233,6 +277,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Boleto\Exibir1.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -267,8 +312,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Boleto\Index.cshtml" />
+    <Content Include="Views\Boleto\Exibir2.cshtml" />
+    <Content Include="Views\Boleto\Remessa.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\ImpactroLibrary\Cobranca\Cobranca.csproj">
+      <Project>{1f150b0e-39c0-4ef1-9841-f30067c8a1ca}</Project>
+      <Name>Cobranca</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -295,7 +348,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61382</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61382/</IISUrl>
+          <IISUrl>http://localhost/BoletoMVC</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

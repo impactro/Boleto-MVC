@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Exemplo Boleto";
+}
+
+<div class="jumbotron">
+    <h1>Exemplo Boleto MVC ASP.Net</h1>
+    <p class="lead">Antes de mais nada, o objetivo deste exemplo não é ensinar MVC</p>
+    <p>Este é um projeto padrão criado pelo Visual Studio 2015, e foi altrado minimamente a fim de apenas mostrar como usar meu componente de geração de boletos e remessas em projetos ASP.Net MVC</p>
+    <p><a href="http://github.com/impactro" target="_blank">Para ver mais exemplo e ter mais informações acesso o GitHub</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Impressão de boleto ASPX</h2>
+        <p>A forma mais simples de usar componentes <b>WebControls</b> é usando <b>ViewPage</b>, onde tem praticamente a mesma forma de funcionamento da forma anterior de uma página .aspx</p>
+        <p>@Html.ActionLink("Veja", "Exibir1")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Impressão de boleto CSHTML</h2>
+        <p>Outra forma é renderizando o HTML dentro dos padrões normal do MVC, veja uma simples ideia de como fazer isso</p>
+        <p>@Html.ActionLink("Veja", "Exibir2")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Geração de Arquivo de Remessa</h2>
+        <p>Um simples exemplo do resultado final de um arquivo de remessa.</p>
+        <p>@Html.ActionLink("Veja", "Remessa")</p>
+    </div>
+</div>
