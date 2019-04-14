@@ -3,6 +3,8 @@ A [Nova Plataforma de Boletos de Pagamento-Cobrança Registrada](https://portal.
 ![Prazos Boleto Registrado](https://raw.githubusercontent.com/impactro/Boleto-Test/master/DOC/PrazoRegistro.JPG)
 
 Acesse a Wiki de documentação:
-
+* [Código Fonte](https://github.com/impactro/Impactro.Cobranca)
 * [Bancos Suportados](https://github.com/impactro/Boleto-Test/wiki/Bancos-Suportados)
 * [História e Continuidade](https://github.com/impactro/Boleto-Test/wiki/Continuidade)
+
+Não comercializo mais o componente abertamente desde 2017, e o antigo site [BoletoASP.com.br](www.boletoasp.com.br) não está mais diponível, mas todos os exemplos e formas de uso, assim como a DLL e fontes agora são de uso livre.
